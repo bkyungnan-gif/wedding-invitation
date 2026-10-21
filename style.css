@@ -226,6 +226,7 @@ h1 {
 }
 
 
+
 /* Floral wedding invitation */
 .hero {
   position: relative;
@@ -233,7 +234,7 @@ h1 {
   overflow: hidden;
 }
 
-/* Top and bottom floral decorations */
+/* Floral decorations */
 .hero::before {
   content: "";
   position: absolute;
@@ -242,23 +243,32 @@ h1 {
     url("assets/floral-top.png"),
     url("assets/floral-bottom.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom center;
-  background-size: 42% auto, 76% auto;
+
+  /* 상단 꽃은 왼쪽 위, 하단 가랜드는 아래쪽 */
+  background-position:
+    left top,
+    center calc(100% - 8px);
+
+  /* 하단 가랜드 크기를 줄여 글자와 겹침 방지 */
+  background-size: 42% auto, 62% auto;
+
   opacity: 0.9;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Keep existing text and photo above the decorations */
+/* 텍스트와 사진을 장식보다 위에 표시 */
 .hero > * {
   position: relative;
   z-index: 1;
 }
 
-/* Mobile layout */
+/* 모바일 화면 */
 @media (max-width: 520px) {
   .hero::before {
-    background-size: 48% auto, 90% auto;
-    background-position: top left, bottom center;
+    background-size: 46% auto, 76% auto;
+    background-position:
+      left top,
+      center calc(100% - 6px);
   }
 }
