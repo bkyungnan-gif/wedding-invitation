@@ -511,3 +511,64 @@ h1 {
     padding-right: 26px;
   }
 }
+
+/* ===== Wedding invitation refinements ===== */
+
+/* 표지 영문 타이포그래피 */
+.hero-photo::after {
+  font-family: "Caveat", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(64px, 17vw, 92px);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  transform: rotate(-45deg) scaleX(1.08);
+  text-shadow: 0 1px 5px #51482d30;
+}
+
+/* 표지의 이름 순서와 여백 */
+.hero h1 {
+  letter-spacing: 0.015em;
+}
+
+/* 초대 문구: 아이보리 종이 느낌 */
+.message {
+  position: relative;
+  background-color: #f8f4e9 !important;
+  background-image:
+    repeating-linear-gradient(
+      35deg,
+      rgba(145, 125, 85, 0.025) 0px,
+      rgba(145, 125, 85, 0.025) 1px,
+      transparent 1px,
+      transparent 5px
+    ) !important;
+  color: #4b5142 !important;
+  outline: 1px solid #c9b98b;
+  outline-offset: -12px;
+  box-shadow: inset 0 0 35px rgba(145, 125, 85, 0.06);
+}
+
+.message .section-kicker,
+.message h2,
+.message .message-copy,
+.message .family-lines {
+  color: #4b5142 !important;
+}
+
+.message .section-kicker::before {
+  color: #b7a36a !important;
+}
+
+/* 초대 문구의 골드 테두리 */
+.message::after {
+  border-color: rgba(183, 163, 106, 0.55) !important;
+}
+
+/* 모바일 표지 타이포그래피 */
+@media (max-width: 520px) {
+  .hero-photo::after {
+    font-size: clamp(58px, 17vw, 80px);
+    letter-spacing: 1px;
+    transform: rotate(-45deg) scaleX(1.08);
+  }
+}
