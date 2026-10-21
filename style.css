@@ -225,14 +225,15 @@ h1 {
   }
 }
 
-/* Floral wedding invitation decorations */
+
+/* Floral wedding invitation */
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
 }
 
-/* Top and bottom flowers */
+/* Top and bottom floral decorations */
 .hero::before {
   content: "";
   position: absolute;
@@ -241,31 +242,14 @@ h1 {
     url("assets/floral-top.png"),
     url("assets/floral-bottom.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom left;
-  background-size: 48% auto, 72% auto;
+  background-position: top left, bottom center;
+  background-size: 42% auto, 76% auto;
   opacity: 0.9;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Soft ivory silk ribbon */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 8%;
-  right: 0;
-  width: 35%;
-  height: 65%;
-  background-image: url("assets/ribbon.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.85;
-}
-
-/* Keep text and photos above decorations */
+/* Keep existing text and photo above the decorations */
 .hero > * {
   position: relative;
   z-index: 1;
@@ -274,12 +258,7 @@ h1 {
 /* Mobile layout */
 @media (max-width: 520px) {
   .hero::before {
-    background-size: 56% auto, 82% auto;
-  }
-
-  .hero::after {
-    width: 28%;
-    height: 48%;
-    top: 10%;
+    background-size: 48% auto, 90% auto;
+    background-position: top left, bottom center;
   }
 }
