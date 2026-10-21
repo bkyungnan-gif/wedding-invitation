@@ -572,3 +572,22 @@ h1 {
     transform: rotate(-45deg) scaleX(1.08);
   }
 }
+
+/* Elegant handwritten wedding title */
+.hero-photo::after {
+  font-family: "Allura", cursive !important;
+  font-weight: 400 !important;
+  font-size: clamp(88px, 20vw, 128px) !important;
+  line-height: 0.9 !important;
+  letter-spacing: 0 !important;
+  transform: rotate(-45deg) scaleX(1.15) !important;
+  text-shadow: 0 1px 4px rgba(65, 55, 35, 0.18) !important;
+}
+
+/* Mobile adjustment */
+@media (max-width: 520px) {
+  .hero-photo::after {
+    font-size: clamp(76px, 20vw, 105px) !important;
+    transform: rotate(-45deg) scaleX(1.12) !important;
+  }
+}
