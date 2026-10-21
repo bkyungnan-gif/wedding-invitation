@@ -262,3 +262,252 @@ h1 {
     background-position: top left, bottom center;
   }
 }
+
+/* =========================================
+   OLIVE GREEN WEDDING DESIGN
+   Cream · Olive Green · Champagne Gold
+   ========================================= */
+
+:root {
+  --paper: #f8f5ed;
+  --ink: #3e4436;
+  --muted: #777966;
+  --line: #d9d0b5;
+  --accent: #b7a36a;
+  --olive: #49683b;
+  --olive-dark: #3e5b32;
+  --cream: #f8f3df;
+  --gold: #d8c78b;
+}
+
+/* 전체 배경 */
+body {
+  background: #e9e6dc !important;
+  color: var(--ink) !important;
+}
+
+.invitation {
+  background: var(--paper) !important;
+}
+
+/* 표지 */
+.hero {
+  position: relative;
+  background: var(--paper) !important;
+  min-height: 100svh;
+  padding-top: 42px;
+  padding-bottom: 36px;
+}
+
+/* 기존 꽃 장식은 숨김 */
+.hero::before {
+  content: none !important;
+}
+
+/* 표지 사진 */
+.hero-photo {
+  position: relative;
+  width: min(100%, 390px) !important;
+  aspect-ratio: 3 / 4 !important;
+  margin-bottom: 30px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-color: var(--olive) !important;
+  background-image: url("assets/cover.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  overflow: hidden;
+}
+
+/* 사진 위 영문 타이포그래피 */
+.hero-photo::after {
+  content: "We\A Said\A Yes";
+  white-space: pre;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff4b0;
+  font-family: "Caveat", "Brush Script MT", cursive;
+  font-size: clamp(58px, 15vw, 82px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -2px;
+  text-align: center;
+  text-shadow: 0 1px 8px #18231355;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+/* 표지의 날짜와 이름 */
+.eyebrow {
+  color: var(--olive) !important;
+  letter-spacing: 0.25em !important;
+}
+
+.date-line {
+  color: var(--muted) !important;
+}
+
+h1 {
+  color: var(--olive-dark) !important;
+}
+
+.ampersand {
+  color: var(--accent) !important;
+}
+
+.venue-line,
+.scroll-link {
+  color: var(--muted) !important;
+}
+
+/* 초대 문구: 그린 카드 */
+.message {
+  position: relative;
+  margin: 0;
+  background: var(--olive) !important;
+  color: var(--cream) !important;
+  border-top: 0 !important;
+  outline: 1px solid var(--gold);
+  outline-offset: -13px;
+}
+
+.message::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid #d8c78b99;
+  pointer-events: none;
+}
+
+.message .section-kicker,
+.message h2,
+.message .message-copy,
+.message .family-lines {
+  color: var(--cream) !important;
+}
+
+.message .section-kicker::before {
+  content: "✦" !important;
+  color: var(--gold) !important;
+}
+
+/* 갤러리 */
+.gallery-section {
+  background: var(--paper) !important;
+}
+
+.gallery-section .section-kicker,
+.date-section .section-kicker,
+.location-section .section-kicker,
+.account-section .section-kicker,
+.contact-section .section-kicker {
+  color: var(--olive) !important;
+}
+
+.gallery-item {
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+}
+
+/* 날짜와 달력 */
+.date-section {
+  background: #efeee3 !important;
+}
+
+#calendar-month,
+.event-date {
+  color: var(--olive-dark) !important;
+}
+
+.calendar .wedding-day {
+  background: var(--olive) !important;
+  color: white !important;
+}
+
+/* 오시는 길 */
+.location-section {
+  background: var(--paper) !important;
+}
+
+.venue-name {
+  color: var(--olive-dark) !important;
+}
+
+.outline-button,
+.map-button,
+.copy-button {
+  color: var(--olive-dark) !important;
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 0 !important;
+}
+
+.outline-button:hover,
+.map-button:hover,
+.copy-button:hover {
+  background: #e8e8d9 !important;
+}
+
+/* 계좌 안내 */
+.account-section {
+  background: #efeee3 !important;
+}
+
+.account-group {
+  border-color: var(--line) !important;
+}
+
+.account-toggle {
+  color: var(--olive-dark) !important;
+}
+
+/* 연락처 */
+.contact-section {
+  background: var(--paper) !important;
+}
+
+.contact-card {
+  border: 1px solid var(--line) !important;
+  background: transparent !important;
+}
+
+/* 마지막 감사 인사 */
+.footer {
+  position: relative;
+  background: var(--olive-dark) !important;
+  color: var(--cream) !important;
+  border-top: 1px solid var(--gold);
+}
+
+.footer p:first-child {
+  color: var(--cream) !important;
+}
+
+.top-button {
+  color: var(--gold) !important;
+}
+
+/* 모바일 화면 */
+@media (max-width: 520px) {
+  .hero {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-photo {
+    width: 100% !important;
+  }
+
+  .hero-photo::after {
+    font-size: clamp(56px, 16vw, 76px);
+  }
+
+  .section {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
