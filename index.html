@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ef">
+  <meta name="description" content="소중한 분들을 모시고 새로운 시작을 함께하고 싶습니다.">
+  <title>우리의 결혼식에 초대합니다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="invitation">
+    <section class="hero" aria-label="청첩장 표지">
+      <p class="eyebrow" id="hero-label">WEDDING INVITATION</p>
+      <div class="hero-photo" role="img" aria-label="신랑 신부 대표 사진"></div>
+      <p class="date-line" id="hero-date">2028년 10월 21일 토요일 오후 2시</p>
+      <h1><span id="groom-name">신랑 이름</span><span class="ampersand"> & </span><span id="bride-name">신부 이름</span></h1>
+      <p class="venue-line" id="hero-venue">예식장 이름 · 서울</p>
+      <a class="scroll-link" href="#invitation-message">SCROLL TO INVITE <span>↓</span></a>
+    </section>
+
+    <section class="section message" id="invitation-message">
+      <p class="section-kicker">WITH OUR HEARTS</p>
+      <h2>소중한 분들을<br>초대합니다</h2>
+      <p class="message-copy" id="invitation-text"></p>
+      <div class="family-lines" id="family-lines"></div>
+    </section>
+
+    <section class="section gallery-section">
+      <p class="section-kicker">OUR MOMENTS</p>
+      <h2>함께 담은 순간</h2>
+      <p class="section-note">저희의 소중한 순간을 나눕니다.</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="section date-section">
+      <p class="section-kicker">SAVE THE DATE</p>
+      <h2 id="calendar-month">OCTOBER 2028</h2>
+      <div class="calendar" id="calendar"></div>
+      <p class="event-date" id="event-date"></p>
+      <p class="countdown" id="countdown"></p>
+    </section>
+
+    <section class="section location-section">
+      <p class="section-kicker">LOCATION</p>
+      <h2>오시는 길</h2>
+      <p class="venue-name" id="location-name"></p>
+      <p class="address" id="location-address"></p>
+      <button class="outline-button" id="copy-address" type="button">주소 복사하기</button>
+      <div class="map-buttons" id="map-buttons"></div>
+      <div class="transport-info" id="transport-info"></div>
+    </section>
+
+    <section class="section account-section" id="account-section">
+      <p class="section-kicker">WITH YOUR BLESSING</p>
+      <h2>마음 전하실 곳</h2>
+      <p class="section-note">축하의 마음을 전하실 분들을 위해<br>계좌 정보를 안내드립니다.</p>
+      <div id="accounts"></div>
+    </section>
+
+    <section class="section contact-section">
+      <p class="section-kicker">CONTACT</p>
+      <h2>축하의 마음을 전해주세요</h2>
+      <p class="section-note">궁금하신 점은 아래 연락처로 문의해주세요.</p>
+      <div id="contacts" class="contacts"></div>
+    </section>
+
+    <footer class="footer">
+      <p id="footer-names">신랑 이름 & 신부 이름</p>
+      <p>함께해 주셔서 감사합니다.</p>
+      <button class="top-button" id="back-to-top" type="button">↑ 맨 위로</button>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="사진 닫기">×</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="이전 사진">‹</button>
+    <img id="lightbox-image" alt="확대된 웨딩 사진">
+    <button class="lightbox-next" id="lightbox-next" aria-label="다음 사진">›</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
