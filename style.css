@@ -224,3 +224,62 @@ h1 {
     padding-right: 24px;
   }
 }
+
+/* Floral wedding invitation decorations */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Top and bottom flowers */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("assets/floral-top.png"),
+    url("assets/floral-bottom.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom left;
+  background-size: 48% auto, 72% auto;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Soft ivory silk ribbon */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 35%;
+  height: 65%;
+  background-image: url("assets/ribbon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Keep text and photos above decorations */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 520px) {
+  .hero::before {
+    background-size: 56% auto, 82% auto;
+  }
+
+  .hero::after {
+    width: 28%;
+    height: 48%;
+    top: 10%;
+  }
+}
