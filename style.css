@@ -262,37 +262,3 @@ h1 {
     background-position: top left, bottom center;
   }
 }
-
-/* Safe wedding design adjustments */
-
-/* 필기체 표지 제목 */
-.hero-photo::after {
-  font-family: "Allura", cursive !important;
-  font-weight: 400 !important;
-  font-size: clamp(76px, 17vw, 110px) !important;
-  line-height: 0.95 !important;
-  letter-spacing: 0 !important;
-  transform: rotate(-25deg) scaleX(1.08) !important;
-  text-shadow: 0 1px 4px rgba(65, 55, 35, 0.15) !important;
-}
-
-/* 초대 문구의 아이보리 종이 배경 */
-.message {
-  background-color: #f8f4e9 !important;
-  background-image: repeating-linear-gradient(
-    35deg,
-    rgba(145, 125, 85, 0.025) 0,
-    rgba(145, 125, 85, 0.025) 1px,
-    transparent 1px,
-    transparent 5px
-  ) !important;
-  color: #4b5142 !important;
-}
-
-.message .section-kicker,
-.message h2,
-.message .message-copy,
-.message .family-lines {
-  color: #4b5142 !important;
-}
-
